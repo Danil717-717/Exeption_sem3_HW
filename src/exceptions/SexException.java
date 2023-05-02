@@ -1,3 +1,5 @@
+package exceptions;
+
 public class SexException extends Exception{
 
     public void sexException(String i) {

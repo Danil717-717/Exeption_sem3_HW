@@ -1,19 +1,20 @@
+package data;
 
 import java.util.Scanner;
 
 public class InputData {
-    //System.out.println("Введите: Фамилия Имя Отчество Дата_рождения(dd.mm.yyyy) Номер_телефона Пол(f/m) через пробел:");
-    public String[] enterData() {
+    public String[] inputUserData() {
         Scanner iScanner = new Scanner(System.in);
         while (true){
-            System.out.println("Введите строку через ПРОБЕЛ (строка должна содержать Ф.И.О, дату рождения - dd.mm.yyyy, номер телефона - цифры, пол - f/m ) : ");
+            System.out.println("Введите: Фамилия Имя Отчество, Дата_рождения(dd.mm.yyyy), Номер_телефона(цифры), Пол(f/m) через пробел:\n" +
+                               "(Если нет отчества введите 2 пробела)");
             String data = iScanner.nextLine();
             String[] arrayData = data.split(" ");
             if (arrayData.length == 6) {
                 return arrayData;
             } else if (arrayData.length < 6){
-                System.out.println("you have not entered all the data, please try again");
-            } else System.out.println("you entered more data, please try again");
+                System.out.println("ввели недостаточно данных");
+            } else System.out.println("ввели лишние данные");
         }
 
     }

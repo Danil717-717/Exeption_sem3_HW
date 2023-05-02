@@ -1,3 +1,5 @@
+package exceptions;
+
 public class PhoneNumException extends Exception{
 
 
